@@ -12,6 +12,14 @@
 		C573B9421EAF2458003ACB7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B9411EAF2458003ACB7E /* ViewController.m */; };
 		C573B9441EAF2458003ACB7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C573B9431EAF2458003ACB7E /* Assets.xcassets */; };
 		C573B9471EAF2458003ACB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C573B9451EAF2458003ACB7E /* Main.storyboard */; };
+		C573B9501EAF27C5003ACB7E /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B94F1EAF27C5003ACB7E /* MainWindowController.m */; };
+		C573B9581EAF3431003ACB7E /* MainWindowRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B9571EAF3431003ACB7E /* MainWindowRowView.m */; };
+		C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD71051EB5D74500B89C05 /* ImageViewer.m */; };
+		C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */; };
+		C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */; };
+		C5F085F11EB8581000A4BC34 /* ThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F085EF1EB8581000A4BC34 /* ThumbnailViewController.m */; };
+		C5F085F21EB8581000A4BC34 /* ThumbnailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F085F01EB8581000A4BC34 /* ThumbnailViewController.xib */; };
+		C5F085F61EB85DFC00A4BC34 /* ThumbnailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F085F51EB85DFC00A4BC34 /* ThumbnailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,20 @@
 		C573B9431EAF2458003ACB7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C573B9461EAF2458003ACB7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C573B9481EAF2458003ACB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C573B94E1EAF27C5003ACB7E /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		C573B94F1EAF27C5003ACB7E /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		C573B9561EAF3431003ACB7E /* MainWindowRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowRowView.h; sourceTree = "<group>"; };
+		C573B9571EAF3431003ACB7E /* MainWindowRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowRowView.m; sourceTree = "<group>"; };
+		C5AD71041EB5D74500B89C05 /* ImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewer.h; sourceTree = "<group>"; };
+		C5AD71051EB5D74500B89C05 /* ImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
+		C5EC4D7C1EB078A400AB64B4 /* ImageViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerWindowController.h; sourceTree = "<group>"; };
+		C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewerWindowController.m; sourceTree = "<group>"; };
+		C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewerWindowController.xib; sourceTree = "<group>"; };
+		C5F085EE1EB8581000A4BC34 /* ThumbnailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewController.h; sourceTree = "<group>"; };
+		C5F085EF1EB8581000A4BC34 /* ThumbnailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailViewController.m; sourceTree = "<group>"; };
+		C5F085F01EB8581000A4BC34 /* ThumbnailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailViewController.xib; sourceTree = "<group>"; };
+		C5F085F41EB85DFC00A4BC34 /* ThumbnailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailView.h; sourceTree = "<group>"; };
+		C5F085F51EB85DFC00A4BC34 /* ThumbnailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +80,8 @@
 			children = (
 				C573B93A1EAF2458003ACB7E /* AppDelegate.h */,
 				C573B93B1EAF2458003ACB7E /* AppDelegate.m */,
-				C573B9401EAF2458003ACB7E /* ViewController.h */,
-				C573B9411EAF2458003ACB7E /* ViewController.m */,
+				C573B9591EAF343E003ACB7E /* MainWindow */,
+				C5EC4D811EB078AA00AB64B4 /* ImageViewer */,
 				C573B9431EAF2458003ACB7E /* Assets.xcassets */,
 				C573B9451EAF2458003ACB7E /* Main.storyboard */,
 				C573B9481EAF2458003ACB7E /* Info.plist */,
@@ -74,6 +96,44 @@
 				C573B93E1EAF2458003ACB7E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C573B9591EAF343E003ACB7E /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				C573B94E1EAF27C5003ACB7E /* MainWindowController.h */,
+				C573B94F1EAF27C5003ACB7E /* MainWindowController.m */,
+				C573B9561EAF3431003ACB7E /* MainWindowRowView.h */,
+				C573B9571EAF3431003ACB7E /* MainWindowRowView.m */,
+				C573B9401EAF2458003ACB7E /* ViewController.h */,
+				C573B9411EAF2458003ACB7E /* ViewController.m */,
+			);
+			name = MainWindow;
+			sourceTree = "<group>";
+		};
+		C5EC4D811EB078AA00AB64B4 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				C5EC4D7C1EB078A400AB64B4 /* ImageViewerWindowController.h */,
+				C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */,
+				C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */,
+				C5AD71041EB5D74500B89C05 /* ImageViewer.h */,
+				C5AD71051EB5D74500B89C05 /* ImageViewer.m */,
+				C5F085F31EB8581400A4BC34 /* Thumbnail */,
+			);
+			name = ImageViewer;
+			sourceTree = "<group>";
+		};
+		C5F085F31EB8581400A4BC34 /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				C5F085EE1EB8581000A4BC34 /* ThumbnailViewController.h */,
+				C5F085EF1EB8581000A4BC34 /* ThumbnailViewController.m */,
+				C5F085F01EB8581000A4BC34 /* ThumbnailViewController.xib */,
+				C5F085F41EB85DFC00A4BC34 /* ThumbnailView.h */,
+				C5F085F51EB85DFC00A4BC34 /* ThumbnailView.m */,
+			);
+			name = Thumbnail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */,
 				C573B9441EAF2458003ACB7E /* Assets.xcassets in Resources */,
+				C5F085F21EB8581000A4BC34 /* ThumbnailViewController.xib in Resources */,
 				C573B9471EAF2458003ACB7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,9 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C573B9581EAF3431003ACB7E /* MainWindowRowView.m in Sources */,
 				C573B9421EAF2458003ACB7E /* ViewController.m in Sources */,
+				C5F085F11EB8581000A4BC34 /* ThumbnailViewController.m in Sources */,
 				C573B93F1EAF2458003ACB7E /* main.m in Sources */,
+				C573B9501EAF27C5003ACB7E /* MainWindowController.m in Sources */,
+				C5F085F61EB85DFC00A4BC34 /* ThumbnailView.m in Sources */,
 				C573B93C1EAF2458003ACB7E /* AppDelegate.m in Sources */,
+				C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */,
+				C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +369,7 @@
 				C573B94D1EAF2458003ACB7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
