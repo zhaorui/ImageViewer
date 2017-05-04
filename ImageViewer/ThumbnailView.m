@@ -10,6 +10,11 @@
 
 @implementation ThumbnailView
 
+-(void)setSelected:(BOOL)selected {
+    _selected = selected;
+    [self setNeedsDisplay:YES];
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     if (self.selected) {
@@ -18,22 +23,6 @@
     }
 }
 
--(void)setSelected:(BOOL)selected {
-    if (_selected == selected) {
-        return;
-    }
-    
-    selected = _selected;
-    [self setNeedsDisplay:YES];
-}
-
--(void)mouseEntered:(NSEvent *)event {
-    
-}
-
--(void)mouseExited:(NSEvent *)event {
-    
-}
 
 
 @end

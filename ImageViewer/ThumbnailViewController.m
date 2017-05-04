@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self bind:@"selected" toObject:self.view withKeyPath:@"selected" options:nil];
+    [self.view bind:@"selected" toObject:self withKeyPath:@"selected" options:nil];
+    
 }
 
 
