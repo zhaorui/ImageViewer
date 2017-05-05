@@ -11,7 +11,7 @@
 @interface ImageView : NSImageView
 
 -(void)setAnchorPoint:(CGPoint)anchorPoint;
-@property (nonatomic) CGFloat angle;
-@property (nonatomic) CGFloat scale;
+
+
 
 @end

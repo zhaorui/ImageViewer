@@ -91,6 +91,8 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     [self.arrayController addObjects: self.thumbnails];
     self.collectionsDisplay = YES;
     
+    self.displayView.layer.transform = CATransform3DIdentity;
+    
     
 }
 
@@ -103,6 +105,7 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
             NSLog(@"Sometimes KVO observe that arrayController's array is empty, while we change the selctionIndex");
             return;
         }
+        
         
         self.displayView.image = [self.thumbnails[self.arrayController.selectionIndex] objectForKey:@"image"];
         
@@ -160,33 +163,32 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
 }
 
 - (IBAction)clockwiseRotate:(NSButton *)sender {
-    //anchor point is set once view is loaded to window, so the view won't be offset
-    //[self.displayView.layer setAnchorPoint:NSMakePoint(0.5, 0.5)];
-    
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    animation.duration = 0.3;
-    animation.fromValue = [NSNumber numberWithFloat:self.displayView.angle];
-    self.displayView.angle -= M_PI_2;
-    animation.toValue = [NSNumber numberWithFloat:self.displayView.angle];
+    const CGFloat angle = -M_PI_2;
+    const CGFloat start_angle = [[self.displayView.layer valueForKeyPath:@"transform.rotation.z"] floatValue];
+    const CGFloat end_angle = start_angle + angle;
     
     [self.displayView setAnchorPoint:NSMakePoint(0.5, 0.5)];
     
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.duration = 0.3;
+    animation.fromValue = [NSNumber numberWithFloat:start_angle];
+    animation.toValue = [NSNumber numberWithFloat:end_angle];
     [self.displayView.layer addAnimation:animation forKey:@"rotate"];
-    self.displayView.layer.transform = CATransform3DRotate(CATransform3DIdentity, self.displayView.angle, 0, 0, 1);
+    self.displayView.layer.transform = CATransform3DRotate(self.displayView.layer.transform, angle, 0, 0, 1);
     
 }
 
 - (IBAction)zoomin:(NSButton *)sender {
-    //self.displayView.frame = CGRectInset(self.displayView.frame, -10, -10);
-    self.displayView.scale += 0.1;
-    self.displayView.layer.transform = CATransform3DScale(CATransform3DIdentity, self.displayView.scale, self.displayView.scale, 1);
+    [self.displayView setAnchorPoint:NSMakePoint(0.5, 0.5)];
+    const CGFloat scale = 1.1;
+    self.displayView.layer.transform = CATransform3DScale(self.displayView.layer.transform, scale, scale, 1);
 }
 
 
 - (IBAction)zoomout:(NSButton *)sender {
-    //self.displayView.frame = CGRectInset(self.displayView.frame, 10, 10);
-    self.displayView.scale -= 0.1;
-    self.displayView.layer.transform = CATransform3DScale(CATransform3DIdentity, self.displayView.scale, self.displayView.scale, 1);
+    [self.displayView setAnchorPoint:NSMakePoint(0.5, 0.5)];
+    const CGFloat scale = 0.9;
+    self.displayView.layer.transform = CATransform3DScale(self.displayView.layer.transform, scale, scale, 1);
 }
 
 -(void)dealloc {
