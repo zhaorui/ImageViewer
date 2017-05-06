@@ -11,6 +11,7 @@
 #import "ImageView.h"
 #import "ThumbnailViewController.h"
 #import "ThumbnailView.h"
+#import "NavigateView.h"
 
 //MARK: - NSAnimationDelegate
 @interface ImageViewerWindowController (Animation) <NSAnimationDelegate>
@@ -35,6 +36,8 @@
 @property (weak) IBOutlet ImageView *displayView;
 @property (weak) IBOutlet NSBox *controlBar;
 @property (weak) IBOutlet NSView *animationView;
+@property (weak) IBOutlet NavigateView *prevView;
+@property (weak) IBOutlet NavigateView *nextView;
 
 
 @end
@@ -60,14 +63,10 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     self.window.movable = false;
     self.window.backgroundColor = [NSColor blackColor];
     
-    // bug in OS X 10.11.x in that NSCollectionView cannot be connected to its prototype item in the storyboard
-    // so we set it here programmatically
-    //
-    //self.collectionView.itemPrototype = self.thumbnail;
+
     ThumbnailViewController *thumbnail = [[ThumbnailViewController alloc] initWithNibName:@"ThumbnailViewController"
                                                                                    bundle:nil];
     self.collectionView.itemPrototype = thumbnail;
-    
     
     [self.arrayController addObserver:self forKeyPath:@"selectionIndex"
                               options:NSKeyValueObservingOptionNew
@@ -92,7 +91,8 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     self.collectionsDisplay = YES;
     
     self.displayView.layer.transform = CATransform3DIdentity;
-    
+    [self.prevView addTrackingRect:self.prevView.bounds owner:self.prevView userData:nil assumeInside:NO];
+    [self.nextView addTrackingRect:self.nextView.bounds owner:self.nextView userData:nil assumeInside:NO];
     
 }
 
@@ -191,6 +191,22 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     self.displayView.layer.transform = CATransform3DScale(self.displayView.layer.transform, scale, scale, 1);
 }
 
+- (IBAction)prev:(NSButton *)sender {
+    NSInteger index = 0;
+    if ((index = self.collectionView.selectionIndexes.firstIndex) <= 0) {
+        return;
+    }
+    self.collectionView.selectionIndexes = [NSIndexSet indexSetWithIndex:index - 1];
+}
+
+- (IBAction)next:(NSButton *)sender {
+    NSInteger index = self.collectionView.selectionIndexes.firstIndex;
+    if (index >= [(NSArray*)self.arrayController.arrangedObjects count]) {
+        return;
+    }
+    self.collectionView.selectionIndexes = [NSIndexSet indexSetWithIndex:index+1];
+}
+
 -(void)dealloc {
     [NSMenu setMenuBarVisible:YES];
     NSLog(@"ImageViewerWindowController dealloc");
@@ -200,6 +216,7 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     NSLog(@"current seletced %@", self.collectionView.selectionIndexes);
     NSLog(@"current seletced %lu", (unsigned long)self.arrayController.selectionIndex);
 }
+
 
 @end
 

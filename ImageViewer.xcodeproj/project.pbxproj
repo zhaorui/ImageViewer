@@ -14,6 +14,7 @@
 		C573B9471EAF2458003ACB7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C573B9451EAF2458003ACB7E /* Main.storyboard */; };
 		C573B9501EAF27C5003ACB7E /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B94F1EAF27C5003ACB7E /* MainWindowController.m */; };
 		C573B9581EAF3431003ACB7E /* MainWindowRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B9571EAF3431003ACB7E /* MainWindowRowView.m */; };
+		C58C3D5C1EBDE65900DC81CB /* NavigateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C3D5B1EBDE65900DC81CB /* NavigateView.m */; };
 		C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD71051EB5D74500B89C05 /* ImageViewer.m */; };
 		C5E86BA51EB9790000F67A1F /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E86BA41EB9790000F67A1F /* ImageView.m */; };
 		C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */; };
@@ -37,6 +38,8 @@
 		C573B94F1EAF27C5003ACB7E /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 		C573B9561EAF3431003ACB7E /* MainWindowRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowRowView.h; sourceTree = "<group>"; };
 		C573B9571EAF3431003ACB7E /* MainWindowRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowRowView.m; sourceTree = "<group>"; };
+		C58C3D5A1EBDE65900DC81CB /* NavigateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigateView.h; sourceTree = "<group>"; };
+		C58C3D5B1EBDE65900DC81CB /* NavigateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigateView.m; sourceTree = "<group>"; };
 		C5AD71041EB5D74500B89C05 /* ImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewer.h; sourceTree = "<group>"; };
 		C5AD71051EB5D74500B89C05 /* ImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
 		C5E86BA31EB9790000F67A1F /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				C5AD71051EB5D74500B89C05 /* ImageViewer.m */,
 				C5E86BA31EB9790000F67A1F /* ImageView.h */,
 				C5E86BA41EB9790000F67A1F /* ImageView.m */,
+				C58C3D5A1EBDE65900DC81CB /* NavigateView.h */,
+				C58C3D5B1EBDE65900DC81CB /* NavigateView.m */,
 				C5F085F31EB8581400A4BC34 /* Thumbnail */,
 			);
 			name = ImageViewer;
@@ -224,6 +229,7 @@
 				C573B93C1EAF2458003ACB7E /* AppDelegate.m in Sources */,
 				C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */,
 				C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */,
+				C58C3D5C1EBDE65900DC81CB /* NavigateView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
