@@ -15,10 +15,6 @@
     [super doCommandBySelector:selector];
 }
 
-//-(void)keyDown:(NSEvent *)event {
-//    [self interpretKeyEvents:[NSArray arrayWithObjects:event, nil]];
-//}
-
 -(void)cancelOperation:(id)sender{
     NSLog(@"cancel from ImageViewer by %@", sender);
     [self close];
