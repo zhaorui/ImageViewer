@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C54EA6631EB98C1200F17208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54EA6621EB98C1200F17208 /* Assets.xcassets */; };
+		C5524CB01ECD7E60001D549E /* ImagesJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C5524CAF1ECD7E60001D549E /* ImagesJSON.m */; };
 		C573B93C1EAF2458003ACB7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B93B1EAF2458003ACB7E /* AppDelegate.m */; };
 		C573B93F1EAF2458003ACB7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B93E1EAF2458003ACB7E /* main.m */; };
 		C573B9421EAF2458003ACB7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B9411EAF2458003ACB7E /* ViewController.m */; };
@@ -16,6 +17,7 @@
 		C573B9581EAF3431003ACB7E /* MainWindowRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B9571EAF3431003ACB7E /* MainWindowRowView.m */; };
 		C58C3D5C1EBDE65900DC81CB /* NavigateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C3D5B1EBDE65900DC81CB /* NavigateView.m */; };
 		C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD71051EB5D74500B89C05 /* ImageViewer.m */; };
+		C5BC0DC41ECD5521005638BA /* ControlBarCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC0DC31ECD5521005638BA /* ControlBarCenterView.m */; };
 		C5E86BA51EB9790000F67A1F /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E86BA41EB9790000F67A1F /* ImageView.m */; };
 		C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */; };
 		C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		C54EA6621EB98C1200F17208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C5524CAE1ECD7E60001D549E /* ImagesJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesJSON.h; sourceTree = "<group>"; };
+		C5524CAF1ECD7E60001D549E /* ImagesJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesJSON.m; sourceTree = "<group>"; };
 		C573B9371EAF2458003ACB7E /* ImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C573B93A1EAF2458003ACB7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C573B93B1EAF2458003ACB7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		C58C3D5B1EBDE65900DC81CB /* NavigateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigateView.m; sourceTree = "<group>"; };
 		C5AD71041EB5D74500B89C05 /* ImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewer.h; sourceTree = "<group>"; };
 		C5AD71051EB5D74500B89C05 /* ImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
+		C5BC0DC21ECD5521005638BA /* ControlBarCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlBarCenterView.h; sourceTree = "<group>"; };
+		C5BC0DC31ECD5521005638BA /* ControlBarCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlBarCenterView.m; sourceTree = "<group>"; };
 		C5E86BA31EB9790000F67A1F /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
 		C5E86BA41EB9790000F67A1F /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
 		C5EC4D7C1EB078A400AB64B4 /* ImageViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerWindowController.h; sourceTree = "<group>"; };
@@ -123,12 +129,16 @@
 				C5EC4D7C1EB078A400AB64B4 /* ImageViewerWindowController.h */,
 				C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */,
 				C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */,
+				C5BC0DC21ECD5521005638BA /* ControlBarCenterView.h */,
+				C5BC0DC31ECD5521005638BA /* ControlBarCenterView.m */,
 				C5AD71041EB5D74500B89C05 /* ImageViewer.h */,
 				C5AD71051EB5D74500B89C05 /* ImageViewer.m */,
 				C5E86BA31EB9790000F67A1F /* ImageView.h */,
 				C5E86BA41EB9790000F67A1F /* ImageView.m */,
 				C58C3D5A1EBDE65900DC81CB /* NavigateView.h */,
 				C58C3D5B1EBDE65900DC81CB /* NavigateView.m */,
+				C5524CAE1ECD7E60001D549E /* ImagesJSON.h */,
+				C5524CAF1ECD7E60001D549E /* ImagesJSON.m */,
 				C5F085F31EB8581400A4BC34 /* Thumbnail */,
 			);
 			name = ImageViewer;
@@ -226,10 +236,12 @@
 				C573B9501EAF27C5003ACB7E /* MainWindowController.m in Sources */,
 				C5F085F61EB85DFC00A4BC34 /* ThumbnailView.m in Sources */,
 				C5E86BA51EB9790000F67A1F /* ImageView.m in Sources */,
+				C5BC0DC41ECD5521005638BA /* ControlBarCenterView.m in Sources */,
 				C573B93C1EAF2458003ACB7E /* AppDelegate.m in Sources */,
 				C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */,
 				C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */,
 				C58C3D5C1EBDE65900DC81CB /* NavigateView.m in Sources */,
+				C5524CB01ECD7E60001D549E /* ImagesJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

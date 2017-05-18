@@ -12,6 +12,8 @@
 #import "ThumbnailViewController.h"
 #import "ThumbnailView.h"
 #import "NavigateView.h"
+#import "ControlBarCenterView.h"
+
 
 //MARK: - NSAnimationDelegate
 @interface ImageViewerWindowController (Animation) <NSAnimationDelegate>
@@ -38,6 +40,7 @@
 @property (weak) IBOutlet NSView *animationView;
 @property (weak) IBOutlet NavigateView *prevView;
 @property (weak) IBOutlet NavigateView *nextView;
+@property (weak) IBOutlet ControlBarCenterView *controlbar_center_view;
 
 
 @end
@@ -93,6 +96,7 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     self.displayView.layer.transform = CATransform3DIdentity;
     [self.prevView addTrackingRect:self.prevView.bounds owner:self.prevView userData:nil assumeInside:NO];
     [self.nextView addTrackingRect:self.nextView.bounds owner:self.nextView userData:nil assumeInside:NO];
+    [self.controlbar_center_view update];
     
 }
 

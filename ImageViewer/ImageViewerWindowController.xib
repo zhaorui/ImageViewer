@@ -14,6 +14,7 @@
                 <outlet property="collectionBorderedView" destination="r4C-4A-Vss" id="FjY-hL-dkG"/>
                 <outlet property="collectionView" destination="KGw-7O-ITc" id="0Pg-gT-UJw"/>
                 <outlet property="controlBar" destination="9bS-1J-m2g" id="oUP-Hu-LmO"/>
+                <outlet property="controlbar_center_view" destination="nbB-rw-bGF" id="D4k-GQ-Bpd"/>
                 <outlet property="displayView" destination="b7i-xv-cTr" id="5Bm-qU-ROP"/>
                 <outlet property="nextView" destination="QKW-9e-XFl" id="9H3-Qk-6IR"/>
                 <outlet property="prevView" destination="9FJ-gQ-ctD" id="XMe-DJ-Ajk"/>
@@ -47,8 +48,9 @@
                                     <rect key="frame" x="1" y="1" width="695" height="68"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-rw-bGF">
-                                            <rect key="frame" x="56" y="0.0" width="583" height="70"/>
+                                        <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbB-rw-bGF" customClass="ControlBarCenterView">
+                                            <rect key="frame" x="26" y="0.0" width="643" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc3-Qn-eEJ">
                                                     <rect key="frame" x="20" y="11" width="48" height="48"/>
@@ -61,8 +63,16 @@
                                                         <action selector="toggleCollectionView:" target="-2" id="t6I-6x-CRu"/>
                                                     </connections>
                                                 </button>
+                                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oIV-Iz-I3h">
+                                                    <rect key="frame" x="95" y="11" width="48" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="play" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="rLL-QS-d0P">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-K5-X8b">
-                                                    <rect key="frame" x="89" y="11" width="48" height="48"/>
+                                                    <rect key="frame" x="162" y="11" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="clockwise" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tof-UJ-Vvw">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -72,12 +82,9 @@
                                                         <action selector="clockwiseRotate:" target="-2" id="cMF-Af-AJL"/>
                                                     </connections>
                                                 </button>
-                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="r33-Kh-thJ">
-                                                    <rect key="frame" x="162" y="11" width="48" height="48"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="48" id="JOj-Xm-Dt8"/>
-                                                        <constraint firstAttribute="width" constant="48" id="aHx-ZE-PzS"/>
-                                                    </constraints>
+                                                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r33-Kh-thJ">
+                                                    <rect key="frame" x="240" y="11" width="48" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomin" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="S7J-9b-JKi">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -87,7 +94,7 @@
                                                     </connections>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORA-YS-zre">
-                                                    <rect key="frame" x="241" y="11" width="48" height="48"/>
+                                                    <rect key="frame" x="323" y="11" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="zoomout" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Zs9-ma-R7v">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -98,7 +105,7 @@
                                                     </connections>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vuf-Hx-TkT">
-                                                    <rect key="frame" x="325" y="11" width="48" height="48"/>
+                                                    <rect key="frame" x="401" y="11" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="download" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="33M-AF-jaO">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -106,7 +113,7 @@
                                                     </buttonCell>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-lf-wXv">
-                                                    <rect key="frame" x="399" y="11" width="48" height="48"/>
+                                                    <rect key="frame" x="465" y="11" width="48" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="forward" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Nuz-nA-KT7">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -114,7 +121,7 @@
                                                     </buttonCell>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RPe-FR-v9z">
-                                                    <rect key="frame" x="472" y="11" width="100" height="48"/>
+                                                    <rect key="frame" x="523" y="11" width="100" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="original" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="8zo-zc-1tQ">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -122,11 +129,6 @@
                                                     </buttonCell>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="r33-Kh-thJ" secondAttribute="bottom" constant="11" id="La6-hM-cjG"/>
-                                                <constraint firstItem="r33-Kh-thJ" firstAttribute="leading" secondItem="nbB-rw-bGF" secondAttribute="leading" constant="162" id="iUI-Uh-wz7"/>
-                                                <constraint firstItem="r33-Kh-thJ" firstAttribute="top" secondItem="nbB-rw-bGF" secondAttribute="top" constant="11" id="lEH-lw-P7E"/>
-                                            </constraints>
                                         </customView>
                                     </subviews>
                                 </view>
@@ -237,6 +239,7 @@
         <image name="list_hide" width="40" height="40"/>
         <image name="next" width="30" height="57"/>
         <image name="original" width="82" height="40"/>
+        <image name="play" width="40" height="40"/>
         <image name="prev" width="30" height="57"/>
         <image name="zoomin" width="40" height="40"/>
         <image name="zoomout" width="40" height="40"/>

@@ -8,11 +8,36 @@
 
 #import "ViewController.h"
 #import "ImageViewerWindowController.h"
+#import "ImagesJSON.h"
 
 // Keys used for bindings
 #define ATKeyName @"name"
 #define ATKeyShortDescription @"shortDescription"
 #define ATKeyImagePreview @"imagePreview"
+
+
+static NSString * mock_json =
+@"{\
+    \"c_index\": 1,\
+    \"pics\": [\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"\",  \
+                    \"o_url\": \"https://www.baidu.com/img/bd_logo1.png\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                    },\
+                    {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"\",  \
+                    \"o_url\": \"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                }\
+    ]\
+}";
 
 
 @interface ViewController () <NSTableViewDelegate, NSTableViewDataSource>

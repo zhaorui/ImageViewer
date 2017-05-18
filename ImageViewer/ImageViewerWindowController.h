@@ -7,10 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ImagesJSON.h"
 
 @interface ImageViewerWindowController : NSWindowController
 
 @property (strong) NSMutableArray *thumbnails;
 @property (nonatomic) BOOL collectionsDisplay;
+@property (strong) ImagesJSON * images;
+
 
 @end
