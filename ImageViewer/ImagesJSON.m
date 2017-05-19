@@ -32,7 +32,7 @@
         for (id pict_info in images) {
             NSURL *url = [NSURL URLWithString:(NSString*)pict_info[@"o_url"]];
             NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-            [self.pictures addObject:image];
+            [self.pictures addObject:@{@"image": image}];
         }
         
     }

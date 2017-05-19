@@ -75,22 +75,7 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
                               options:NSKeyValueObservingOptionNew
                               context:ImageViewerWindowControllerContext];
     
-    //add images
-    self.thumbnails = [[NSMutableArray alloc] init];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:@"FirstResponder"]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameIconViewTemplate]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameBluetoothTemplate]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameIChatTheaterTemplate]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameSlideshowTemplate]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameActionTemplate]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:NSImageNameSmartBadgeTemplate]}];
-    
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:@"poto"]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:@"lugu"]}];
-    [self.thumbnails addObject:@{@"image": [NSImage imageNamed:@"forward"]}];
-
-    
-    [self.arrayController addObjects: self.thumbnails];
+    [self.arrayController addObjects: self.images.pictures];
     self.collectionsDisplay = YES;
     
     self.displayView.layer.transform = CATransform3DIdentity;
@@ -111,7 +96,7 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
         }
         
         
-        self.displayView.image = [self.thumbnails[self.arrayController.selectionIndex] objectForKey:@"image"];
+        self.displayView.image = [self.images.pictures[self.arrayController.selectionIndex] objectForKey:@"image"];
         
         
         NSRect displayRect = NSMakeRect(0, 120, self.window.frame.size.width, self.window.frame.size.height-120);

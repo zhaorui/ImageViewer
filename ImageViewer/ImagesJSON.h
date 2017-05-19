@@ -13,7 +13,7 @@
 
 @property (copy,nonatomic) NSString* raw_json;
 @property (strong,nonatomic) NSDictionary * json_dict;
-@property (strong,nonatomic) NSMutableArray<NSImage *> * pictures;
+@property (strong,nonatomic) NSMutableArray * pictures;
 @property NSUInteger selected_index;
 
 -(instancetype)initWithJsonString:(NSString*)json;

@@ -11,7 +11,6 @@
 
 @interface ImageViewerWindowController : NSWindowController
 
-@property (strong) NSMutableArray *thumbnails;
 @property (nonatomic) BOOL collectionsDisplay;
 @property (strong) ImagesJSON * images;
 

@@ -90,7 +90,10 @@ static NSString * mock_json =
     }
     
     if ([_windowControllers count] == 0) {
+        
+        ImagesJSON *json = [[ImagesJSON alloc] initWithJsonString:mock_json];
         ImageViewerWindowController *controller = [[ImageViewerWindowController alloc] init];
+        [controller setImages:json];
         
         // Observe all windows closing so we can remove them from our array.
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(windowClosed:) name:NSWindowWillCloseNotification object:controller.window];

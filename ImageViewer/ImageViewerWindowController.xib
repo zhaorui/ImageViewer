@@ -230,7 +230,12 @@
             </connections>
             <point key="canvasLocation" x="225.5" y="277.5"/>
         </window>
-        <arrayController id="4DR-ei-n9p"/>
+        <arrayController id="4DR-ei-n9p">
+            <declaredKeys>
+                <string>image</string>
+                <string>size</string>
+            </declaredKeys>
+        </arrayController>
     </objects>
     <resources>
         <image name="clockwise" width="40" height="40"/>
