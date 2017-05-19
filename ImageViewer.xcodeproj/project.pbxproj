@@ -18,6 +18,9 @@
 		C58C3D5C1EBDE65900DC81CB /* NavigateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C58C3D5B1EBDE65900DC81CB /* NavigateView.m */; };
 		C5AD71061EB5D74500B89C05 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AD71051EB5D74500B89C05 /* ImageViewer.m */; };
 		C5BC0DC41ECD5521005638BA /* ControlBarCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BC0DC31ECD5521005638BA /* ControlBarCenterView.m */; };
+		C5E0E6861ECED79C00BA1039 /* spinning.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5E0E6851ECED79C00BA1039 /* spinning.gif */; };
+		C5E0E6881ECEDE7400BA1039 /* 115spin.gif in Resources */ = {isa = PBXBuildFile; fileRef = C5E0E6871ECEDE7400BA1039 /* 115spin.gif */; };
+		C5E0E68B1ECEE9B100BA1039 /* NSImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E0E68A1ECEE9B100BA1039 /* NSImage+GIF.m */; };
 		C5E86BA51EB9790000F67A1F /* ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E86BA41EB9790000F67A1F /* ImageView.m */; };
 		C5EC4D7F1EB078A400AB64B4 /* ImageViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5EC4D7D1EB078A400AB64B4 /* ImageViewerWindowController.m */; };
 		C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5EC4D7E1EB078A400AB64B4 /* ImageViewerWindowController.xib */; };
@@ -48,6 +51,10 @@
 		C5AD71051EB5D74500B89C05 /* ImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
 		C5BC0DC21ECD5521005638BA /* ControlBarCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlBarCenterView.h; sourceTree = "<group>"; };
 		C5BC0DC31ECD5521005638BA /* ControlBarCenterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlBarCenterView.m; sourceTree = "<group>"; };
+		C5E0E6851ECED79C00BA1039 /* spinning.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinning.gif; sourceTree = "<group>"; };
+		C5E0E6871ECEDE7400BA1039 /* 115spin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 115spin.gif; sourceTree = "<group>"; };
+		C5E0E6891ECEE9B100BA1039 /* NSImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+GIF.h"; sourceTree = "<group>"; };
+		C5E0E68A1ECEE9B100BA1039 /* NSImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+GIF.m"; sourceTree = "<group>"; };
 		C5E86BA31EB9790000F67A1F /* ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageView.h; sourceTree = "<group>"; };
 		C5E86BA41EB9790000F67A1F /* ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageView.m; sourceTree = "<group>"; };
 		C5EC4D7C1EB078A400AB64B4 /* ImageViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewerWindowController.h; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 				C5EC4D811EB078AA00AB64B4 /* ImageViewer */,
 				C573B9451EAF2458003ACB7E /* Main.storyboard */,
 				C573B9481EAF2458003ACB7E /* Info.plist */,
+				C5E0E6841ECED78200BA1039 /* Resources */,
 				C573B93D1EAF2458003ACB7E /* Supporting Files */,
 			);
 			path = ImageViewer;
@@ -104,7 +112,6 @@
 		C573B93D1EAF2458003ACB7E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C54EA6621EB98C1200F17208 /* Assets.xcassets */,
 				C573B93E1EAF2458003ACB7E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -123,6 +130,16 @@
 			name = MainWindow;
 			sourceTree = "<group>";
 		};
+		C5E0E6841ECED78200BA1039 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5E0E6871ECEDE7400BA1039 /* 115spin.gif */,
+				C5E0E6851ECED79C00BA1039 /* spinning.gif */,
+				C54EA6621EB98C1200F17208 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C5EC4D811EB078AA00AB64B4 /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +156,8 @@
 				C58C3D5B1EBDE65900DC81CB /* NavigateView.m */,
 				C5524CAE1ECD7E60001D549E /* ImagesJSON.h */,
 				C5524CAF1ECD7E60001D549E /* ImagesJSON.m */,
+				C5E0E6891ECEE9B100BA1039 /* NSImage+GIF.h */,
+				C5E0E68A1ECEE9B100BA1039 /* NSImage+GIF.m */,
 				C5F085F31EB8581400A4BC34 /* Thumbnail */,
 			);
 			name = ImageViewer;
@@ -215,9 +234,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E0E6881ECEDE7400BA1039 /* 115spin.gif in Resources */,
 				C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */,
 				C5F085F21EB8581000A4BC34 /* ThumbnailViewController.xib in Resources */,
 				C54EA6631EB98C1200F17208 /* Assets.xcassets in Resources */,
+				C5E0E6861ECED79C00BA1039 /* spinning.gif in Resources */,
 				C573B9471EAF2458003ACB7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +253,7 @@
 				C573B9581EAF3431003ACB7E /* MainWindowRowView.m in Sources */,
 				C573B9421EAF2458003ACB7E /* ViewController.m in Sources */,
 				C5F085F11EB8581000A4BC34 /* ThumbnailViewController.m in Sources */,
+				C5E0E68B1ECEE9B100BA1039 /* NSImage+GIF.m in Sources */,
 				C573B93F1EAF2458003ACB7E /* main.m in Sources */,
 				C573B9501EAF27C5003ACB7E /* MainWindowController.m in Sources */,
 				C5F085F61EB85DFC00A4BC34 /* ThumbnailView.m in Sources */,

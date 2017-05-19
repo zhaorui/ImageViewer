@@ -13,6 +13,7 @@
 #import "ThumbnailView.h"
 #import "NavigateView.h"
 #import "ControlBarCenterView.h"
+#import "NSImage+GIF.h"
 
 
 //MARK: - NSAnimationDelegate
@@ -74,8 +75,10 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     [self.arrayController addObserver:self forKeyPath:@"selectionIndex"
                               options:NSKeyValueObservingOptionNew
                               context:ImageViewerWindowControllerContext];
+
     
     [self.arrayController addObjects: self.images.pictures];
+    self.collectionView.selectionIndexes = [NSIndexSet indexSetWithIndex:self.images.selected_index];
     self.collectionsDisplay = YES;
     
     self.displayView.layer.transform = CATransform3DIdentity;
@@ -194,6 +197,34 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
         return;
     }
     self.collectionView.selectionIndexes = [NSIndexSet indexSetWithIndex:index+1];
+}
+
+- (IBAction)downloadPicture:(NSButton *)sender {
+    NSNumber* file_type = [self.images.pictures[self.arrayController.selectionIndex] objectForKey:@"type"];
+    NSString *saved_location = [NSString stringWithFormat:@"~/Downloads/%@", self.displayView.image.name];
+    NSString *file_path = [saved_location stringByExpandingTildeInPath];
+    
+    if ([file_type integerValue] == NSGIFFileType ) {
+        [self.displayView.image saveAnimatedGIFToFile:file_path];
+    } else {
+        NSImageRep *imgRep = [[self.displayView.image representations] objectAtIndex: 0];
+        NSDictionary *image_property = @{};
+//        if ([file_type integerValue] == NSGIFFileType ) {
+//            image_property = @{NSImageLoopCount: @0,
+//                               NSImageCurrentFrameDuration: @1,
+//                               NSImageCurrentFrame: @0,
+//                               NSImageFrameCount: @10,
+//                               };
+//        }
+        NSData *data = [(NSBitmapImageRep*)imgRep representationUsingType: [file_type integerValue]
+                                                               properties: image_property];
+        
+        if ([data writeToFile:file_path atomically: NO]) {
+            NSLog(@"save file success!");
+        } else {
+            NSLog(@"faild to save image");
+        }
+    }
 }
 
 -(void)dealloc {

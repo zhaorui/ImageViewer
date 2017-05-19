@@ -27,15 +27,31 @@ static NSString * mock_json =
                     \"o_url\": \"https://www.baidu.com/img/bd_logo1.png\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
-                    },\
-                    {\
+                },\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"\",  \
+                    \"o_url\": \"https://media.giphy.com/media/ANq60RGYFWiXK/giphy.gif\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                },\
+                {\
                     \"s_url\": \"\",  \
                     \"m_url\": \"\",  \
                     \"l_url\": \"\",  \
                     \"o_url\": \"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
-                }\
+                },\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"\",  \
+                    \"o_url\": \"https://s1.dwstatic.com/group1/M00/4B/04/735b094d4b4aaa9dde810d3d1302c264.gif\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                },\
     ]\
 }";
 
