@@ -65,6 +65,9 @@
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="play:" target="-2" id="hd9-IE-i8j"/>
+                                                    </connections>
                                                 </button>
                                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vh9-K5-X8b">
                                                     <rect key="frame" x="162" y="11" width="48" height="48"/>
@@ -237,6 +240,22 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="wrs-zG-Vod"/>
                     </imageView>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x0O-cd-80U">
+                        <rect key="frame" x="650" y="450" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="close_hover" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gNF-Cb-8fd">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASI-hS-vC3">
+                        <rect key="frame" x="600" y="450" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pause_hover" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Twz-cF-xOl">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
             <connections>
@@ -254,11 +273,13 @@
     </objects>
     <resources>
         <image name="clockwise" width="40" height="40"/>
+        <image name="close_hover" width="60" height="60"/>
         <image name="download" width="40" height="40"/>
         <image name="forward" width="24" height="24"/>
         <image name="list_hide" width="40" height="40"/>
         <image name="next" width="30" height="57"/>
         <image name="original" width="82" height="40"/>
+        <image name="pause_hover" width="60" height="60"/>
         <image name="play" width="40" height="40"/>
         <image name="prev" width="30" height="57"/>
         <image name="zoomin" width="40" height="40"/>

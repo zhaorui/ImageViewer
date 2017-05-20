@@ -279,6 +279,19 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     });
 }
 
+- (IBAction)play:(NSButton *)sender {
+    //hide bottom bar
+    [self.animationView setHidden:YES];
+    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextImageInLoop) userInfo:nil repeats:true];
+    
+}
+
+-(void)nextImageInLoop {
+    NSInteger index = self.collectionView.selectionIndexes.firstIndex;
+    NSInteger images_count = [(NSArray*)self.arrayController.arrangedObjects count];
+    NSInteger next_index = (index+1) % images_count;
+    self.collectionView.selectionIndexes = [NSIndexSet indexSetWithIndex:next_index];;
+}
 
 @end
 
