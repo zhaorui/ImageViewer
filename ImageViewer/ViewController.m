@@ -23,15 +23,15 @@ static NSString * mock_json =
                 {\
                     \"s_url\": \"\",  \
                     \"m_url\": \"\",  \
-                    \"l_url\": \"\",  \
-                    \"o_url\": \"https://www.baidu.com/img/bd_logo1.png\",  \
+                    \"l_url\": \"https://misc.360buyimg.com/mtd/pc/index/home/images/logo.v2@2x.png\",  \
+                    \"o_url\": \"https://img.alicdn.com/tps/i4/TB1ndm5RXXXXXbXaXXXtKXbFXXX.gif\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
                 },\
                 {\
                     \"s_url\": \"\",  \
                     \"m_url\": \"\",  \
-                    \"l_url\": \"\",  \
+                    \"l_url\": \"https://media.giphy.com/media/ANq60RGYFWiXK/giphy.gif\",  \
                     \"o_url\": \"https://media.giphy.com/media/ANq60RGYFWiXK/giphy.gif\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
@@ -39,8 +39,24 @@ static NSString * mock_json =
                 {\
                     \"s_url\": \"\",  \
                     \"m_url\": \"\",  \
-                    \"l_url\": \"\",  \
+                    \"l_url\": \"https://www.baidu.com/img/bd_logo1.png\",\
                     \"o_url\": \"https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                },\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"https://s1.dwstatic.com/group1/M00/4B/04/735b094d4b4aaa9dde810d3d1302c264.gif\",  \
+                    \"o_url\": \"https://s1.dwstatic.com/group1/M00/4B/04/735b094d4b4aaa9dde810d3d1302c264.gif\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                },\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"\",  \
+                    \"o_url\": \"\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
                 },\
@@ -49,6 +65,14 @@ static NSString * mock_json =
                     \"m_url\": \"\",  \
                     \"l_url\": \"\",  \
                     \"o_url\": \"https://s1.dwstatic.com/group1/M00/4B/04/735b094d4b4aaa9dde810d3d1302c264.gif\",  \
+                    \"angle\": 0,     \
+                    \"mid\": 123123,  \
+                },\
+                {\
+                    \"s_url\": \"\",  \
+                    \"m_url\": \"\",  \
+                    \"l_url\": \"https://assets-cdn.github.com/images/modules/site/logos/swift-logo.png\",  \
+                    \"o_url\": \"\",  \
                     \"angle\": 0,     \
                     \"mid\": 123123,  \
                 },\

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C53028C61ECFF6FE000FFD7A /* ImgNotExist.png in Resources */ = {isa = PBXBuildFile; fileRef = C53028C41ECFF6FE000FFD7A /* ImgNotExist.png */; };
+		C53028C71ECFF6FE000FFD7A /* ImgNotExist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C53028C51ECFF6FE000FFD7A /* ImgNotExist@2x.png */; };
 		C54EA6631EB98C1200F17208 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C54EA6621EB98C1200F17208 /* Assets.xcassets */; };
 		C5524CB01ECD7E60001D549E /* ImagesJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = C5524CAF1ECD7E60001D549E /* ImagesJSON.m */; };
 		C573B93C1EAF2458003ACB7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C573B93B1EAF2458003ACB7E /* AppDelegate.m */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C53028C41ECFF6FE000FFD7A /* ImgNotExist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImgNotExist.png; sourceTree = "<group>"; };
+		C53028C51ECFF6FE000FFD7A /* ImgNotExist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ImgNotExist@2x.png"; sourceTree = "<group>"; };
 		C54EA6621EB98C1200F17208 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5524CAE1ECD7E60001D549E /* ImagesJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesJSON.h; sourceTree = "<group>"; };
 		C5524CAF1ECD7E60001D549E /* ImagesJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesJSON.m; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 		C5E0E6841ECED78200BA1039 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C53028C41ECFF6FE000FFD7A /* ImgNotExist.png */,
+				C53028C51ECFF6FE000FFD7A /* ImgNotExist@2x.png */,
 				C5E0E6871ECEDE7400BA1039 /* 115spin.gif */,
 				C5E0E6851ECED79C00BA1039 /* spinning.gif */,
 				C54EA6621EB98C1200F17208 /* Assets.xcassets */,
@@ -237,9 +243,11 @@
 				C5E0E6881ECEDE7400BA1039 /* 115spin.gif in Resources */,
 				C5EC4D801EB078A400AB64B4 /* ImageViewerWindowController.xib in Resources */,
 				C5F085F21EB8581000A4BC34 /* ThumbnailViewController.xib in Resources */,
+				C53028C71ECFF6FE000FFD7A /* ImgNotExist@2x.png in Resources */,
 				C54EA6631EB98C1200F17208 /* Assets.xcassets in Resources */,
 				C5E0E6861ECED79C00BA1039 /* spinning.gif in Resources */,
 				C573B9471EAF2458003ACB7E /* Main.storyboard in Resources */,
+				C53028C61ECFF6FE000FFD7A /* ImgNotExist.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

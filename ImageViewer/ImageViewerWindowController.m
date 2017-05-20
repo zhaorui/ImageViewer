@@ -222,7 +222,8 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
 
 - (IBAction)downloadPicture:(NSButton *)sender {
     NSNumber* file_type = [self.images.pictures[self.arrayController.selectionIndex] objectForKey:@"type"];
-    NSString *saved_location = [NSString stringWithFormat:@"~/Downloads/%@", self.displayView.image.name];
+    NSString *saved_location = [NSString stringWithFormat:@"~/Downloads/%@",
+                                self.images.pictures[self.arrayController.selectionIndex][@"name"]];
     NSString *file_path = [saved_location stringByExpandingTildeInPath];
     
     if ([file_type integerValue] == NSGIFFileType ) {
@@ -261,6 +262,21 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
 - (IBAction)showCurrentSelected:(NSButton *)sender {
     NSLog(@"current seletced %@", self.collectionView.selectionIndexes);
     NSLog(@"current seletced %lu", (unsigned long)self.arrayController.selectionIndex);
+}
+- (IBAction)showOriginalImage:(NSButton *)sender {
+    self.displayView.image = [NSImage imageNamed:@"115spin"];
+    dispatch_queue_t queue = dispatch_queue_create("download_picture", nil);
+    dispatch_async(queue, ^{
+        NSImage * original_img = [[NSImage alloc] initWithContentsOfURL:self.images.pictures[self.arrayController.selectionIndex][@"o_url"]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __weak __typeof__(self) weakSelf = self;
+            if (original_img == nil) {
+                weakSelf.displayView.image = [NSImage imageNamed:@"ImgNotExist"];
+            } else {
+                weakSelf.displayView.image = original_img;
+            }
+        });
+    });
 }
 
 

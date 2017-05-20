@@ -30,38 +30,64 @@
         
         NSArray<NSDictionary*> * images = self.json_dict[@"pics"];
         for (id pict_info in images) {
-            NSURL *url = [NSURL URLWithString:(NSString*)pict_info[@"o_url"]];
-            NSLog(@"load pic url: %@", url);
+            NSURL *o_url = [NSURL URLWithString:(NSString*)pict_info[@"o_url"]];
+            NSURL *l_url = [NSURL URLWithString:(NSString*)pict_info[@"l_url"]];
+            NSURL *m_url = [NSURL URLWithString:(NSString*)pict_info[@"m_url"]];
+            NSURL *s_url = [NSURL URLWithString:(NSString*)pict_info[@"s_url"]];
+            NSNumber *angle = pict_info[@"angle"];
+            NSNumber *mid = pict_info[@"mid"];
             
-            NSBitmapImageFileType type = NSTIFFFileType;
-            NSString *file_type = [url.lastPathComponent componentsSeparatedByString:@"."].lastObject;
-            if ([file_type isEqualToString:@"bmp"]) {
-                type = NSBMPFileType;
-            } else if ([file_type isEqualToString:@"tiff"]) {
-                type = NSTIFFFileType;
-            } else if ([file_type isEqualToString:@"jpg"] || [file_type isEqualToString:@"jpeg"]) {
-                type = NSJPEGFileType;
-            } else if ([file_type isEqualToString:@"gif"]) {
-                type = NSGIFFileType;
-            }
-            
+            NSBitmapImageFileType type = [self imageTypeFromFileName:l_url.lastPathComponent];
             NSMutableDictionary * pict_dict = [NSMutableDictionary dictionaryWithDictionary:@{@"image": [NSImage imageNamed:@"115spin"],
-                                                                                              @"name": url.lastPathComponent,
-                                                                                              @"type": [NSNumber numberWithInteger:type]}];
+                                                                                              @"type": [NSNumber numberWithInteger:type],
+                                                                                              @"name": @"",
+                                                                                              @"o_url": o_url,
+                                                                                              @"l_url": l_url, //this is the default one
+                                                                                              @"m_url": m_url,
+                                                                                              @"s_url": s_url,
+                                                                                              @"angle": angle,
+                                                                                              @"mid": mid,
+                                                                                              @"exist": [NSNumber numberWithBool:NO],
+                                                                                              }];
             
             [self.pictures addObject:pict_dict];
-            
+            NSLog(@"lurl: %@", l_url);
             dispatch_queue_t queue = dispatch_queue_create("download_picture", nil);
             dispatch_async(queue, ^{
-                NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-                [image setName:url.lastPathComponent];
-                pict_dict[@"image"] = image;
+                
+                NSImage *image = [[NSImage alloc] initWithContentsOfURL:l_url];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (image != nil) {
+                        pict_dict[@"image"] = image;
+                        pict_dict[@"name"] = l_url.lastPathComponent;
+                        pict_dict[@"exist"] = [NSNumber numberWithBool:YES];
+                    } else {
+                        pict_dict[@"image"] = [NSImage imageNamed:@"ImgNotExist"];
+                    }
+                });
             });
         }
-        
     }
     
     return self;
+}
+
+
+- (NSBitmapImageFileType)imageTypeFromFileName:(NSString*)name {
+    NSString *file_type = [[name componentsSeparatedByString:@"."] firstObject];
+    NSBitmapImageFileType type = NSTIFFFileType;
+    if ([file_type isEqualToString:@"bmp"]) {
+        type = NSBMPFileType;
+    } else if ([file_type isEqualToString:@"png"]) {
+        type = NSPNGFileType;
+    } else if ([file_type isEqualToString:@"tiff"]) {
+        type = NSTIFFFileType;
+    } else if ([file_type isEqualToString:@"jpg"] || [file_type isEqualToString:@"jpeg"]) {
+        type = NSJPEGFileType;
+    } else if ([file_type isEqualToString:@"gif"]) {
+        type = NSGIFFileType;
+    }
+    return type;
 }
 
 - (NSString *)contentTypeForImageData:(NSData *)data {
