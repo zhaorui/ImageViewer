@@ -31,6 +31,8 @@
 @end
 
 
+
+
 @interface ImageViewerWindowController ()
 
 @property (strong) IBOutlet NSArrayController *arrayController;
@@ -46,6 +48,25 @@
 
 @end
 
+
+//MARK: - NavigateViewDelegate
+@interface ImageViewerWindowController (NavigateDelegate) <NavigateViewDelegate>
+
+@end
+
+@implementation ImageViewerWindowController (NavigateDelegate)
+
+-(void)mouseEnteredNavigateView {
+    [self.prevView.subviews.firstObject setHidden:NO];
+    [self.nextView.subviews.firstObject setHidden:NO];
+}
+
+-(void)mouseExitedNavigateView {
+    [self.prevView.subviews.firstObject setHidden:YES];
+    [self.nextView.subviews.firstObject setHidden:YES];
+}
+
+@end
 
 static void * ImageViewerWindowControllerContext = "ImageViewerWindowController";
 
@@ -232,6 +253,11 @@ static void * ImageViewerWindowControllerContext = "ImageViewerWindowController"
     NSLog(@"ImageViewerWindowController dealloc");
     [self.arrayController removeObserver:self forKeyPath:@"selectionIndex"];
 }
+
+-(IBAction)enterNavigateView:(id)sender {
+    NSLog(@"enter navigate view");
+}
+
 - (IBAction)showCurrentSelected:(NSButton *)sender {
     NSLog(@"current seletced %@", self.collectionView.selectionIndexes);
     NSLog(@"current seletced %lu", (unsigned long)self.arrayController.selectionIndex);

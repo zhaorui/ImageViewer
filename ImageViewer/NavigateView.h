@@ -8,6 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NavigateView : NSView
+@protocol NavigateViewDelegate <NSObject>
+
+-(void)mouseEnteredNavigateView;
+-(void)mouseExitedNavigateView;
+
+@end
+
+@interface NavigateView : NSControl
+
+@property (nullable,assign) IBOutlet id<NavigateViewDelegate> delegate;
 
 @end

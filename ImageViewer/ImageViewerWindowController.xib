@@ -196,6 +196,9 @@
                                 <color key="fillColor" red="0.5568627451" green="0.55676333109999998" blue="0.55676333109999998" alpha="0.5" colorSpace="calibratedRGB"/>
                             </box>
                         </subviews>
+                        <connections>
+                            <action selector="enterNavigateView:" target="-2" id="Dkm-e2-GWa"/>
+                        </connections>
                     </customView>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-9e-XFl" customClass="NavigateView">
                         <rect key="frame" x="542" y="192" width="155" height="325"/>
@@ -225,6 +228,9 @@
                                 <color key="fillColor" red="0.5568627451" green="0.55676333109999998" blue="0.55676333109999998" alpha="0.5" colorSpace="calibratedRGB"/>
                             </box>
                         </subviews>
+                        <connections>
+                            <action selector="enterNavigateView:" target="-2" id="Kyp-NU-fAj"/>
+                        </connections>
                     </customView>
                 </subviews>
             </view>
@@ -239,6 +245,7 @@
                 <string>size</string>
             </declaredKeys>
         </arrayController>
+        <customCell alignment="left" id="XUO-RT-x9k"/>
     </objects>
     <resources>
         <image name="clockwise" width="40" height="40"/>

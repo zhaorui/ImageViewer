@@ -16,16 +16,33 @@
 
 @implementation NavigateView
 
+
+-(instancetype)initWithFrame:(NSRect)frameRect {
+    if (self = [super initWithFrame:frameRect] ) {
+    }
+    
+    return self;
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
 }
 
 -(void)mouseEntered:(NSEvent *)event {
-    self.subviews.firstObject.hidden = NO;
+    [self.delegate mouseEnteredNavigateView];
 }
 
 -(void)mouseExited:(NSEvent *)event {
-    self.subviews.firstObject.hidden = YES;
+    [self.delegate mouseExitedNavigateView];
+}
+
+-(void)awakeFromNib {
+    NSInteger ret = [super sendActionOn:NSEventMaskMouseEntered|NSEventMaskMouseExited|NSEventTypeLeftMouseUp];
+    NSLog(@"%ld", (long)ret);
+}
+
+-(void)viewDidMoveToWindow {
+    [super sendActionOn:NSEventMaskMouseEntered|NSEventMaskMouseExited|NSEventTypeLeftMouseUp];
 }
 
 
